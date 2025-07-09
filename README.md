@@ -52,7 +52,7 @@ This application allows multiple users to:
    ```env
    MONGODB_URI=your_mongo_connection_string
    JWT_SECRET=your_jwt_secret
-   CLIENT_URL=http://localhost:3000
+   CLIENT_URL=https://todo-board-phi.vercel.app/
    ```
 
 4. Start the backend server:
@@ -74,7 +74,7 @@ This application allows multiple users to:
 
 3. Create a `.env` file and add:
    ```env
-   REACT_APP_API_BASE_URL=http://localhost:5000
+   BACKEND_API_BASE_URL=https://todo-board-rtr9.onrender.com
    ```
 
 4. Start the frontend:
@@ -124,8 +124,8 @@ If two users attempt to update the same task:
 
 ## 🌍 Live Deployment
 
-- 🔗 **Frontend**: [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
-- 🔗 **Backend**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+- 🔗 **Frontend**: [https://todo-board-phi.vercel.app/](https://your-frontend.vercel.app)
+- 🔗 **Backend**: [https://todo-board-rtr9.onrender.com](https://your-backend.onrender.com)
 
 ---
 
