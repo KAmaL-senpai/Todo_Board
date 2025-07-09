@@ -57,7 +57,7 @@ This application allows multiple users to:
    ```env
    MONGO_URL=your_mongo_connection_string
    JWT_SECRET=your_jwt_JWT_SECRET
-   CLIENT_URL=https://todo-board-phi.vercel.app/
+   CLIENT_URL=https://todo-board-phi.vercel.app
    ```
 
 4. Start the backend server:
