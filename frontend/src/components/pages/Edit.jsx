@@ -18,7 +18,7 @@ function Edit() {
     const fetchTask = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8080/api/v1/tasks/${id}`,
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/${id}`,
           {
             withCredentials: true,
           }
@@ -45,7 +45,7 @@ function Edit() {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:8080/api/v1/tasks/update/${id}`,
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${id}`,
         formData,
         {
           withCredentials: true,

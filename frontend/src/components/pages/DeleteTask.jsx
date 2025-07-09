@@ -11,7 +11,7 @@ function DeleteTask() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8080/api/v1/tasks/allTask",
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/allTask`,
           {
             withCredentials: true,
           }
@@ -28,7 +28,7 @@ function DeleteTask() {
   const handleEdit = async (taskId) => {
     try {
       await axios.delete(
-        `http://localhost:8080/api/v1/tasks/delete/${taskId}`,
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/delete/${taskId}`,
         {
           withCredentials: true,
         }

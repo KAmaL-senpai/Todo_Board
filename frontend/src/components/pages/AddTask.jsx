@@ -10,7 +10,7 @@ function AddTask() {
     status: "Todo",
     priority: "medium",
   });
-  
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ function AddTask() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/tasks/createTask",
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/createTask`,
         formData,
         {
           withCredentials: true,
@@ -101,7 +101,6 @@ function AddTask() {
               <option value="High">High</option>
             </select>
           </div>
-          
 
           <button type="submit" className="form-btn">
             Create Task

@@ -16,9 +16,13 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/v1/users/signup", formData, {
-        withCredentials: true,
-      });
+      await axios.post(
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/signup`,
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
       navigate("/home");
     } catch (err) {
       alert(err.response?.data?.message || "Signup failed");

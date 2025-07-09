@@ -1,5 +1,4 @@
 // KanbanTask.jsx
-import React from "react";
 import { Draggable } from "@hello-pangea/dnd";
 import axios from "axios";
 import socket from "./hooks/socket";
@@ -18,7 +17,9 @@ const KanbanTask = ({
     const newUserId = e.target.value;
     try {
       const res = await axios.put(
-        `http://localhost:8080/api/v1/tasks/update/${task._id}`,
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${
+          task._id
+        }`,
         { assignUser: newUserId },
         { withCredentials: true }
       );
@@ -52,7 +53,9 @@ const KanbanTask = ({
 
     try {
       const res = await axios.put(
-        `http://localhost:8080/api/v1/tasks/update/${task._id}`,
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${
+          task._id
+        }`,
         { assignUser: fewestUser._id },
         { withCredentials: true }
       );

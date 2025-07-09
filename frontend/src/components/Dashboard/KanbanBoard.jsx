@@ -21,7 +21,7 @@ function KanbanBoard() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8080/api/v1/tasks/allTask",
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/allTask`,
           {
             withCredentials: true,
           }
@@ -38,9 +38,12 @@ function KanbanBoard() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/logs", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/logs`,
+          {
+            withCredentials: true,
+          }
+        );
         setLogs(res.data);
       } catch (err) {
         console.error("Error fetching logs:", err);
@@ -59,9 +62,12 @@ function KanbanBoard() {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/users", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users`,
+          {
+            withCredentials: true,
+          }
+        );
         setUsers(res.data);
       } catch (err) {
         console.error("Error fetching users:", err);
@@ -72,9 +78,12 @@ function KanbanBoard() {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/v1/users/me", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/me`,
+          {
+            withCredentials: true,
+          }
+        );
         setCurrentUser(res.data);
       } catch (err) {
         console.error("Failed to fetch current user:", err);
@@ -100,7 +109,7 @@ function KanbanBoard() {
     try {
       const movedTask = updatedTasks.find((t) => t._id === taskId);
       await axios.put(
-        `http://localhost:8080/api/v1/tasks/update/${taskId}`,
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${taskId}`,
         {
           ...movedTask,
           updatedAt: new Date().toISOString(),

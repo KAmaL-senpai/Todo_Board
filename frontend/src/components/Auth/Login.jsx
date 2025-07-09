@@ -16,9 +16,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/api/v1/users/login", formData, {
-        withCredentials: true,
-      });
+      await axios.post(
+        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/login`,
+        formData,
+        {
+          withCredentials: true,
+        }
+      );
       navigate("/home");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
