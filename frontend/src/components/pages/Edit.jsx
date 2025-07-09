@@ -70,6 +70,7 @@ function Edit() {
 
           <div className="form-input">
             <label>Title</label>
+            <br />
             <input
               type="text"
               name="title"
@@ -81,6 +82,7 @@ function Edit() {
 
           <div className="form-input">
             <label>Description</label>
+            <br />
             <input
               type="text"
               name="description"
@@ -92,6 +94,7 @@ function Edit() {
 
           <div className="form-input">
             <label>Status</label>
+            <br />
             <select
               name="status"
               value={formData.status}
@@ -105,6 +108,7 @@ function Edit() {
 
           <div className="form-input">
             <label>Priority</label>
+            <br />
             <select
               name="priority"
               value={formData.priority}
