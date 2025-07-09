@@ -4,7 +4,7 @@ module.exports = {
   init: (server) => {
     io = require("socket.io")(server, {
       cors: {
-        origin: ["https://todo-board-phi.vercel.app/"],
+        origin: ["https://todo-board-phi.vercel.app"],
         credentials: true,
       },
     });

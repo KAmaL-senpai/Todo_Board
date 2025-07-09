@@ -39,7 +39,7 @@ io.on("connection", (socket) => {
 // ─────────────────────────────
 app.use(
   cors({
-    origin: ["https://todo-board-phi.vercel.app/"],
+    origin: ["https://todo-board-phi.vercel.app"],
     credentials: true,
   })
 );
