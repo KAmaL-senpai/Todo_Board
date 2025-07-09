@@ -17,9 +17,7 @@ const KanbanTask = ({
     const newUserId = e.target.value;
     try {
       const res = await axios.put(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${
-          task._id
-        }`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/update/${task._id}`,
         { assignUser: newUserId },
         { withCredentials: true }
       );
@@ -53,9 +51,7 @@ const KanbanTask = ({
 
     try {
       const res = await axios.put(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${
-          task._id
-        }`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/update/${task._id}`,
         { assignUser: fewestUser._id },
         { withCredentials: true }
       );

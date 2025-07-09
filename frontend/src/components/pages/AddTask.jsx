@@ -21,7 +21,7 @@ function AddTask() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/createTask`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/createTask`,
         formData,
         {
           withCredentials: true,

@@ -7,7 +7,7 @@ function DashNav({}) {
   const handleLogout = async () => {
     try {
       await axios.post(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/logout`
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/users/logout`
       );
       navigate("/");
     } catch (err) {

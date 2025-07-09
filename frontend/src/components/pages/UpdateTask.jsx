@@ -11,7 +11,7 @@ function UpdateTask() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/allTask`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/allTask`,
           {
             withCredentials: true,
           }

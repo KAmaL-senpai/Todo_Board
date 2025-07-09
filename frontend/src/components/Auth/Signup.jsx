@@ -17,7 +17,7 @@ function Signup() {
     e.preventDefault();
     try {
       await axios.post(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/signup`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/users/signup`,
         formData,
         {
           withCredentials: true,

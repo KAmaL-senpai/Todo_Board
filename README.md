@@ -1,4 +1,3 @@
-
 # 📝 Real-Time Collaborative To-Do Board
 
 A full-stack, real-time collaborative to-do board application similar to Trello, built using the MERN stack. It supports live updates, drag-and-drop tasks, and unique business logic like Smart Assign and Conflict Handling.
@@ -8,6 +7,7 @@ A full-stack, real-time collaborative to-do board application similar to Trello,
 ## 🚀 Project Overview
 
 This application allows multiple users to:
+
 - Register and log in securely.
 - Create and manage tasks on a Kanban board.
 - See real-time task updates made by other users via WebSockets.
@@ -18,6 +18,7 @@ This application allows multiple users to:
 ## 🛠 Tech Stack Used
 
 ### 🔧 Backend
+
 - Node.js
 - Express.js
 - MongoDB
@@ -26,6 +27,7 @@ This application allows multiple users to:
 - Socket.IO
 
 ### 🎨 Frontend
+
 - React.js
 - React DnD (for drag-and-drop)
 - Socket.IO Client
@@ -38,17 +40,20 @@ This application allows multiple users to:
 ### 🔙 Backend
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/realtime-todo-board.git
    cd backend
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Create a `.env` file and add:
+
    ```env
    MONGODB_URI=your_mongo_connection_string
    JWT_SECRET=your_jwt_secret
@@ -63,18 +68,21 @@ This application allows multiple users to:
 ### 🔜 Frontend
 
 1. Open a new terminal:
+
    ```bash
    cd frontend
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Create a `.env` file and add:
+
    ```env
-   BACKEND_API_BASE_URL=https://todo-board-rtr9.onrender.com
+   VITE_API_BASE_URL=https://todo-board-rtr9.onrender.com
    ```
 
 4. Start the frontend:

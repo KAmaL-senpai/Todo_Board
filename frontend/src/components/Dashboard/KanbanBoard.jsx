@@ -21,7 +21,7 @@ function KanbanBoard() {
     const fetchTasks = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/allTask`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/allTask`,
           {
             withCredentials: true,
           }
@@ -39,7 +39,7 @@ function KanbanBoard() {
     const fetchLogs = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/logs`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/logs`,
           {
             withCredentials: true,
           }
@@ -63,7 +63,7 @@ function KanbanBoard() {
     const fetchUsers = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/users`,
           {
             withCredentials: true,
           }
@@ -79,7 +79,7 @@ function KanbanBoard() {
     const fetchCurrentUser = async () => {
       try {
         const res = await axios.get(
-          `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/me`,
+          `${import.meta.env.VITE_API_BASE_URL}/api/v1/users/me`,
           {
             withCredentials: true,
           }
@@ -109,7 +109,7 @@ function KanbanBoard() {
     try {
       const movedTask = updatedTasks.find((t) => t._id === taskId);
       await axios.put(
-        `${import.meta.env.BACKEND_API_BASE_URL}/api/v1/tasks/update/${taskId}`,
+        `${import.meta.env.VITE_API_BASE_URL}/api/v1/tasks/update/${taskId}`,
         {
           ...movedTask,
           updatedAt: new Date().toISOString(),
