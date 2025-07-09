@@ -146,7 +146,7 @@ Watch a full walkthrough of the app in action:
 
 ## 📄 Logic Document
 
-Detailed logic explanation is available in the [LogicDocument.md](./Logic_Document.md) file.
+Detailed logic explanation is available in the [./LogicDocument.md](./Logic_Document.md) file.
 
 ---
 
