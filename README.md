@@ -132,8 +132,8 @@ If two users attempt to update the same task:
 
 ## 🌍 Live Deployment
 
-- 🔗 **Frontend**: [https://todo-board-phi.vercel.app](https://your-frontend.vercel.app)
-- 🔗 **Backend**: [https://todo-board-rtr9.onrender.com](https://your-backend.onrender.com)
+- 🔗 **Frontend**: [https://todo-board-phi.vercel.app](https://todo-board-phi.vercel.app)
+- 🔗 **Backend**: [https://todo-board-rtr9.onrender.com](https://todo-board-rtr9.onrender.com)
 
 ---
 
@@ -146,7 +146,7 @@ Watch a full walkthrough of the app in action:
 
 ## 📄 Logic Document
 
-Detailed logic explanation is available in the [./LogicDocument.md](./Logic_Document.md) file.
+Detailed logic explanation is available in the [LogicDocument.md](./LogicDoument.md) file.
 
 ---
 
