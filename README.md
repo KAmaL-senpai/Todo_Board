@@ -1,14 +1,11 @@
 
-
 # 📝 Real-Time Collaborative To-Do Board
-````
 
 A full-stack, real-time collaborative to-do board application similar to Trello, built using the MERN stack. It supports live updates, drag-and-drop tasks, and unique business logic like Smart Assign and Conflict Handling.
 
 ---
 
-# 🚀 Project Overview
----
+## 🚀 Project Overview
 
 This application allows multiple users to:
 - Register and log in securely.
@@ -44,16 +41,14 @@ This application allows multiple users to:
    ```bash
    git clone https://github.com/yourusername/realtime-todo-board.git
    cd backend
-````
+   ```
 
 2. Install dependencies:
-
    ```bash
    npm install
    ```
 
 3. Create a `.env` file and add:
-
    ```env
    MONGODB_URI=your_mongo_connection_string
    JWT_SECRET=your_jwt_secret
@@ -61,7 +56,6 @@ This application allows multiple users to:
    ```
 
 4. Start the backend server:
-
    ```bash
    npm run dev
    ```
@@ -69,25 +63,21 @@ This application allows multiple users to:
 ### 🔜 Frontend
 
 1. Open a new terminal:
-
    ```bash
    cd frontend
    ```
 
 2. Install dependencies:
-
    ```bash
    npm install
    ```
 
 3. Create a `.env` file and add:
-
    ```env
    REACT_APP_API_BASE_URL=http://localhost:5000
    ```
 
 4. Start the frontend:
-
    ```bash
    npm start
    ```
@@ -96,16 +86,16 @@ This application allows multiple users to:
 
 ## ✨ Features List and Usage Guide
 
-* 👤 User registration & login with JWT authentication
-* 🧩 Kanban board with 3 columns: Todo, In Progress, Done
-* 🔀 Drag-and-drop tasks between columns
-* 👥 Assign tasks to users
-* ⚡ Real-time task updates using WebSockets
-* 📋 Activity log showing last 20 actions
-* 🧠 **Smart Assign**: Automatically assigns task to the user with the fewest active tasks
-* ⚔️ **Conflict Handling**: Detects simultaneous edits and prompts users to merge/overwrite
-* 📱 Fully responsive UI with mobile support
-* 🎞️ Smooth custom animations (drag/drop transitions, etc.)
+- 👤 User registration & login with JWT authentication
+- 🧩 Kanban board with 3 columns: Todo, In Progress, Done
+- 🔀 Drag-and-drop tasks between columns
+- 👥 Assign tasks to users
+- ⚡ Real-time task updates using WebSockets
+- 📋 Activity log showing last 20 actions
+- 🧠 **Smart Assign**: Automatically assigns task to the user with the fewest active tasks
+- ⚔️ **Conflict Handling**: Detects simultaneous edits and prompts users to merge/overwrite
+- 📱 Fully responsive UI with mobile support
+- 🎞️ Smooth custom animations (drag/drop transitions, etc.)
 
 ---
 
@@ -126,38 +116,32 @@ If two users attempt to update the same task:
 1. The server compares the updated timestamps.
 2. If changes overlap, it emits a **conflict warning** to both users.
 3. Both versions are shown, and the users can choose to:
-
-   * **Merge** changes (e.g., combine title/description changes)
-   * **Overwrite** with their own version
+   - **Merge** changes (e.g., combine title/description changes)
+   - **Overwrite** with their own version
 4. Final decision is sent to the server, which updates the task and logs the action.
 
 ---
 
 ## 🌍 Live Deployment
 
-* 🔗 **Frontend**: [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
-* 🔗 **Backend**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+- 🔗 **Frontend**: [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
+- 🔗 **Backend**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
 
 ---
 
 ## 🎥 Demo Video
 
-Watch a full walkthrough of the app in action:
+Watch a full walkthrough of the app in action:  
 📹 [https://your-demo-video-link.com](https://your-demo-video-link.com)
 
 ---
 
 ## 📄 Logic Document
 
-Detailed logic explanation is available in the [Logic\_Document.md](./Logic_Document.md) file.
+Detailed logic explanation is available in the [Logic_Document.md](./Logic_Document.md) file.
 
 ---
 
 ## 🧾 License
 
 This project is open-source and available under the MIT License.
-
-```
-
-
-```
