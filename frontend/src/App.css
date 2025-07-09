@@ -637,11 +637,11 @@ h2 {
   color: white;
 }
 .kanban-task {
-  transition: transform 0.6s;
+  transition: transform 0.3s;
 }
 
 .flip {
-  animation: flipCard 0.6s;
+  animation: flipCard 0.3s;
 }
 
 @keyframes flipCard {
