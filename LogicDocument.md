@@ -10,7 +10,7 @@ In a multi-user environment, sometimes we want to assign tasks automatically ins
 
 So, what I did is — when a user clicks "Smart Assign" on a task, the backend checks all users in the system and counts how many tasks each user is currently assigned to.
 
-Then, it simply picks the person who has **the fewest number of tasks** and assigns the new task to them. That way, work gets distributed more fairly across all users.
+Then, it simply picks the person who has **the fewest number of tasks** and assigns the new task to them (The backend check only the Todo and IsProgress task not the tasks in the Done Column). That way, work gets distributed more fairly across all users.
 
 This logic runs on the server, and once the task is assigned, I send a real-time update to all connected users using Socket.IO, so everyone sees the change instantly.
 
