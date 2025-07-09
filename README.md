@@ -1,8 +1,3 @@
-Here is a **detailed `README.md` template in Markdown**, based on the GitHub Repository instructions from the assignment:
-
----
-
-````markdown
 # 📝 Real-Time Collaborative To-Do Board
 
 A full-stack, real-time collaborative to-do board application similar to Trello, built using the MERN stack. It supports live updates, drag-and-drop tasks, and unique business logic like Smart Assign and Conflict Handling.
@@ -160,7 +155,4 @@ This project is open-source and available under the MIT License.
 
 ```
 
----
 
-Let me know if you want this in a downloadable `.md` file or want help filling it in with your actual project info.
-```
