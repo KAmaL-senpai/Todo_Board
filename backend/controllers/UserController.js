@@ -27,8 +27,8 @@ module.exports.Signup = wrapAsync(async (req, res) => {
   // Set cookie
   res.cookie("token", token, {
     httpOnly: true,
-    sameSite: "Lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: true,
+    sameSite: "None",
   });
 
   res.status(StatusCodes.CREATED).json({
@@ -113,8 +113,8 @@ module.exports.getAllUsers = wrapAsync(async (req, res) => {
 module.exports.Logout = wrapAsync(async (req, res) => {
   res.clearCookie("token", {
     httpOnly: true,
-    sameSite: "Lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: "None",
+    secure: true,
   });
 
   res.status(StatusCodes.OK).json({ message: "Logged out successfully" });
