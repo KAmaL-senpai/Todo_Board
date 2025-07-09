@@ -72,8 +72,8 @@ module.exports.Login = wrapAsync(async (req, res) => {
   // Set cookie
   res.cookie("token", token, {
     httpOnly: true,
-    sameSite: "Lax",
-    secure: process.env.NODE_ENV === "production",
+    sameSite: "None",
+    secure: true,
   });
 
   res.status(StatusCodes.OK).json({
