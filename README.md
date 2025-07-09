@@ -1,6 +1,6 @@
 
 
-````markdown
+````
 # 📝 Real-Time Collaborative To-Do Board
 
 A full-stack, real-time collaborative to-do board application similar to Trello, built using the MERN stack. It supports live updates, drag-and-drop tasks, and unique business logic like Smart Assign and Conflict Handling.
