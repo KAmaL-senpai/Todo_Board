@@ -5,9 +5,9 @@ const { StatusCodes } = require("http-status-codes");
 require("@dotenvx/dotenvx").config();
 
 // Utility: Verify JWT Token with a Promise
-function verifyToken(token, secret) {
+function verifyToken(token, JWT_SECRET) {
   return new Promise((resolve, reject) => {
-    jwt.verify(token, secret, (err, decoded) => {
+    jwt.verify(token, JWT_SECRET, (err, decoded) => {
       if (err) reject(err);
       else resolve(decoded);
     });
@@ -29,7 +29,7 @@ module.exports.verifyUser = wrapAsync(async (req, res, next) => {
 
   try {
     // Decode and verify token
-    const decoded = await verifyToken(token, process.env.SECRET);
+    const decoded = await verifyToken(token, process.env.JWT_SECRET);
 
     // Find the user from decoded token
     const user = await UserModel.findById(decoded.id).select("-password");

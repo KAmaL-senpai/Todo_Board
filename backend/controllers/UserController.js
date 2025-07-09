@@ -1,5 +1,5 @@
 const { UserModel } = require("../models/UserModel");
-const { createSecretToken } = require("../utils/SecretToken");
+const { createJWT_SECRETToken } = require("../utils/JWT_SECRETToken");
 const bcrypt = require("bcryptjs");
 const { wrapAsync } = require("../utils/WrapAsync");
 const { StatusCodes } = require("http-status-codes");
@@ -22,7 +22,7 @@ module.exports.Signup = wrapAsync(async (req, res) => {
   const user = await UserModel.create({ email, username, password });
 
   // Generate token
-  const token = createSecretToken(user._id);
+  const token = createJWT_SECRETToken(user._id);
 
   // Set cookie
   res.cookie("token", token, {
@@ -67,7 +67,7 @@ module.exports.Login = wrapAsync(async (req, res) => {
   }
 
   // Create token
-  const token = createSecretToken(user._id);
+  const token = createJWT_SECRETToken(user._id);
 
   // Set cookie
   res.cookie("token", token, {
