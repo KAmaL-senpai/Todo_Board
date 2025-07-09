@@ -2,6 +2,7 @@ const { TaskModel } = require("../models/TaskModel");
 const { wrapAsync } = require("../utils/WrapAsync");
 const { getIO } = require("./SocketManager");
 const { createLog } = require("../utils/CreateLog");
+const { StatusCodes } = require("http-status-codes");
 
 // Utility Constants
 const forbiddenTitles = ["todo", "inprogress", "done"];
@@ -15,7 +16,7 @@ module.exports.createTask = wrapAsync(async (req, res) => {
 
   // Validation: Title should not match column names
   if (forbiddenTitles.includes(normalizedTitle)) {
-    return res.status(400).json({
+    return res.status(StatusCodes.BAD_REQUEST).json({
       message: "Task title cannot match column names (Todo, InProgress, Done).",
     });
   }
@@ -28,7 +29,7 @@ module.exports.createTask = wrapAsync(async (req, res) => {
 
   if (existingTask) {
     return res
-      .status(400)
+      .status(StatusCodes.BAD_REQUEST)
       .json({ message: "Task title must be unique in the board." });
   }
 
@@ -70,7 +71,7 @@ module.exports.getTaskById = wrapAsync(async (req, res) => {
   });
 
   if (!task) {
-    return res.status(404).json({ message: "Task not found or unauthorized" });
+    return res.status(StatusCodes.NOT_FOUND).json({ message: "Task not found or unauthorized" });
   }
 
   res.json(task);
@@ -89,7 +90,7 @@ module.exports.updateTask = wrapAsync(async (req, res) => {
   });
 
   if (!task) {
-    return res.status(403).json({ message: "Unauthorized or task not found" });
+    return res.status(StatusCodes.FORBIDDEN).json({ message: "Unauthorized or task not found" });
   }
 
   // Conflict detection
@@ -98,7 +99,7 @@ module.exports.updateTask = wrapAsync(async (req, res) => {
   const timeDifference = Math.abs(clientTime - serverUpdatedAt);
 
   if (timeDifference > 100) {
-    return res.status(409).json({
+    return res.status(StatusCodes.CONFLICT).json({
       message: "Task has been modified by someone else.",
       serverTask: task,
     });
@@ -108,7 +109,7 @@ module.exports.updateTask = wrapAsync(async (req, res) => {
 
   // Validation: Prevent column name titles
   if (normalizedTitle && forbiddenTitles.includes(normalizedTitle)) {
-    return res.status(400).json({
+    return res.status(StatusCodes.BAD_REQUEST).json({
       message: "Task title cannot match column names (Todo, InProgress, Done).",
     });
   }
@@ -122,7 +123,7 @@ module.exports.updateTask = wrapAsync(async (req, res) => {
     });
 
     if (existingTask) {
-      return res.status(400).json({
+      return res.status(StatusCodes.BAD_REQUEST).json({
         message: "Task title must be unique within the board.",
       });
     }
@@ -151,7 +152,7 @@ module.exports.deleteTask = wrapAsync(async (req, res) => {
   });
 
   if (!deleteTask) {
-    return res.status(404).json({ message: "Task not found or unauthorized" });
+    return res.status(StatusCodes.NOT_FOUND).json({ message: "Task not found or unauthorized" });
   }
 
   getIO().emit("taskDeleted", deleteTask._id);

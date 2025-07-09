@@ -1,6 +1,7 @@
 const { UserModel } = require("../models/UserModel");
 const jwt = require("jsonwebtoken");
 const { wrapAsync } = require("./WrapAsync");
+const { StatusCodes } = require("http-status-codes");
 require("@dotenvx/dotenvx").config();
 
 // Utility: Verify JWT Token with a Promise
@@ -20,7 +21,7 @@ module.exports.verifyUser = wrapAsync(async (req, res, next) => {
   const token = req.cookies.token;
 
   if (!token) {
-    return res.status(401).json({
+    return res.status(StatusCodes.UNAUTHORIZED).json({
       status: false,
       message: "Unauthorized: No token provided",
     });
@@ -33,7 +34,7 @@ module.exports.verifyUser = wrapAsync(async (req, res, next) => {
     // Find the user from decoded token
     const user = await UserModel.findById(decoded.id).select("-password");
     if (!user) {
-      return res.status(404).json({
+      return res.status(StatusCodes.NOT_FOUND).json({
         status: false,
         message: "User not found",
       });
@@ -42,7 +43,7 @@ module.exports.verifyUser = wrapAsync(async (req, res, next) => {
     req.user = user;
     next();
   } catch (err) {
-    return res.status(401).json({
+    return res.status(StatusCodes.UNAUTHORIZED).json({
       status: false,
       message: "Invalid or expired token",
     });
