@@ -1049,3 +1049,10 @@ h2 {
     transform: translateY(0);
   }
 }
+
+
+.kanban-task select {
+  width: 100%;       /* fill full width of container */
+  max-width: 100%;   /* never exceed its parent's width */
+  box-sizing: border-box; /* include padding/border in width calculation */
+}
