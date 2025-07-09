@@ -55,8 +55,8 @@ This application allows multiple users to:
 3. Create a `.env` file and add:
 
    ```env
-   MONGODB_URI=your_mongo_connection_string
-   JWT_JWT_SECRET=your_jwt_JWT_SECRET
+   MONGO_URL=your_mongo_connection_string
+   JWT_SECRET=your_jwt_JWT_SECRET
    CLIENT_URL=https://todo-board-phi.vercel.app/
    ```
 
@@ -132,7 +132,7 @@ If two users attempt to update the same task:
 
 ## 🌍 Live Deployment
 
-- 🔗 **Frontend**: [https://todo-board-phi.vercel.app/](https://your-frontend.vercel.app)
+- 🔗 **Frontend**: [https://todo-board-phi.vercel.app](https://your-frontend.vercel.app)
 - 🔗 **Backend**: [https://todo-board-rtr9.onrender.com](https://your-backend.onrender.com)
 
 ---
