@@ -26,6 +26,7 @@ function Signup() {
       navigate("/home");
     } catch (err) {
       alert(err.response?.data?.message || "Signup failed");
+      navigate("/signup");
     }
   };
 
