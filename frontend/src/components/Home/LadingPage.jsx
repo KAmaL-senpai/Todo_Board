@@ -17,7 +17,7 @@ function LandingPage() {
             <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
             <p>
               Escape the clutter and chaos—unleash your productivity with
-              Trello.
+              TodoBoard.
             </p>
             <Link to={"/signup"} className="btn">
               Get Started

@@ -13,15 +13,15 @@ function DoMore() {
         <div className=" card card-1">
           <h3>Integrations</h3>
           <p>
-            Connect the apps you are already using into your Trello workflow or
-            add a Power-Up to fine-tune your specific needs.
+            Connect the apps you are already using into your TodoBoard workflow
+            or add a Power-Up to fine-tune your specific needs.
           </p>
           <button>Broswer Integrations</button>
         </div>
         <div className=" card card-2">
           <h3>Butler Automation</h3>
           <p>
-            No-code automation is built into every Trello board. Focus on the
+            No-code automation is built into every TodoBoard board. Focus on the
             work that matters most and let the robots do the rest.
           </p>
           <button>Get to know Automation</button>

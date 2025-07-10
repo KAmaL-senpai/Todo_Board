@@ -20,11 +20,11 @@ function Footer() {
           </div>
           <div className="footer-menu menu-hover">
             <h3>Jobs</h3>
-            <p>Learn on the open roles on the Trello Team</p>
+            <p>Learn on the open roles on the TodoBoard Team</p>
           </div>
           <div className="footer-menu menu-hover">
             <h3>Apps</h3>
-            <p>Download the Trello Apps for Dekstop or Mobile devices</p>
+            <p>Download the TodoBoard Apps for Dekstop or Mobile devices</p>
           </div>
           <div className="footer-menu menu-hover">
             <h3>Contact us</h3>

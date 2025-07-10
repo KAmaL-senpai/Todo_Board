@@ -20,8 +20,9 @@ function Message() {
             <h3>Email magic</h3>
             <p>
               Easily turn your emails into to-dos! Just forward them to your
-              Trello Inbox, and they’ll be transformed by Atlassian Intelligence
-              (AI) into organized to-dos with all the links you need.
+              TodoBoard Inbox, and they’ll be transformed by Atlassian
+              Intelligence (AI) into organized to-dos with all the links you
+              need.
             </p>
           </div>
         </div>
@@ -30,8 +31,8 @@ function Message() {
             <h3>MESSAGE APP SORCERY</h3>
             <p>
               Need to follow up on a message from Slack or Microsoft Teams? Send
-              it directly to your Trello board! Your favorite app interface lets
-              you save messages that appear in your Trello Inbox with
+              it directly to your TodoBoard board! Your favorite app interface
+              lets you save messages that appear in your TodoBoard Inbox with
               AI-generated summaries and links.
             </p>
           </div>
